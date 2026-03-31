@@ -1,0 +1,348 @@
+.public-page {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: var(--beige);
+}
+
+.public-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.public-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--brown-dark);
+  margin-bottom: 6px;
+}
+
+.public-subtitle {
+  color: var(--ink-light);
+  font-size: 14px;
+}
+
+.write-public-btn {
+  background-color: var(--brown);
+  color: var(--cream);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 6px var(--shadow);
+  white-space: nowrap;
+}
+
+.write-public-btn:hover {
+  background-color: var(--brown-dark);
+  transform: translateY(-1px);
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.letter-card {
+  background-color: var(--cream);
+  border-radius: 6px;
+  padding: 24px;
+  border: 1px solid var(--tan);
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.letter-card:hover {
+  box-shadow: 0 4px 18px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card-author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.card-author-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-author-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.card-university {
+  font-size: 12px;
+  color: var(--brown-light);
+}
+
+.card-date {
+  font-size: 11px;
+  color: var(--brown-light);
+  white-space: nowrap;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--brown-dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card-preview {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.card-tag {
+  background-color: var(--tan);
+  color: var(--brown-dark);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.read-more-btn {
+  background: none;
+  border: 1px solid var(--brown-light);
+  color: var(--brown);
+  padding: 5px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.read-more-btn:hover {
+  background-color: var(--tan);
+  color: var(--brown-dark);
+}
+
+.card-full-body {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--tan);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.body-line {
+  margin-bottom: 0;
+}
+
+.body-spacer {
+  height: 12px;
+}
+
+/* Compose overlay (reused from MainPage) */
+.compose-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(44, 31, 14, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 24px;
+  z-index: 200;
+}
+
+.compose-modal {
+  background-color: var(--cream);
+  border-radius: 8px;
+  width: 540px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  border: 1px solid var(--tan);
+  overflow: hidden;
+}
+
+.compose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: var(--brown-dark);
+  color: var(--cream);
+}
+
+.compose-header h3 {
+  font-size: 15px;
+  font-family: var(--font-serif);
+}
+
+.compose-close {
+  background: none;
+  border: none;
+  color: var(--tan);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.compose-close:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.compose-form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.compose-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.compose-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.compose-field input {
+  border: 1px solid var(--tan);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: #fefcf8;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.compose-field input:focus {
+  border-color: var(--brown-light);
+}
+
+.compose-body-field textarea {
+  border: 1px solid var(--tan);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: var(--font-serif);
+  background-color: #fefcf8;
+  color: var(--ink);
+  resize: vertical;
+  outline: none;
+  line-height: 1.7;
+  transition: border-color 0.2s;
+}
+
+.compose-body-field textarea:focus {
+  border-color: var(--brown-light);
+}
+
+.compose-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-top: 1px solid var(--tan);
+}
+
+.compose-discard {
+  background: none;
+  border: 1px solid var(--tan);
+  color: var(--brown);
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.compose-discard:hover {
+  background-color: var(--tan);
+}
+
+.compose-send {
+  background-color: var(--brown);
+  color: var(--cream);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.compose-send:hover {
+  background-color: var(--brown-dark);
+}
+
+.compose-sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  gap: 16px;
+}
+
+.sent-icon {
+  font-size: 48px;
+}
+
+.compose-sent p {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--brown-dark);
+}
