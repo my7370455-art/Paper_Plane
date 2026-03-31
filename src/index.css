@@ -1,0 +1,47 @@
+:root {
+  --cream: #faf6ee;
+  --beige: #f5f0e8;
+  --tan: #e8dcc8;
+  --brown-light: #c8b89a;
+  --brown: #8b6f47;
+  --brown-dark: #5c4a2a;
+  --ink: #2c1f0e;
+  --ink-light: #4a3728;
+  --red-accent: #c0392b;
+  --blue-accent: #2c5f8a;
+  --shadow: rgba(92, 74, 42, 0.15);
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--beige);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tan);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brown-light);
+  border-radius: 3px;
+}
